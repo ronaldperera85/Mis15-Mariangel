@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis 15 Años - Mariángel Chiquinquirá</title>
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Tangerine:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Mis15-Mariangel" />
+    <meta property="og:description" content="Mis 15 Años - Mariángel Chiquinquirá" />
+    <meta property="og:image" content="https://mis15-mariangel.rf.gd/images/logo.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://mis15-mariangel.rf.gd/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Mis15-Mariangel" />
+    <meta property="og:locale" content="es_ES" />
+</head>
+<body>
+
+    <!-- ★★★ INICIO DEL PRELOADER ★★★ -->
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+    <!-- ★★★ FIN DEL PRELOADER ★★★ -->
+
+    <!-- 1. Reproductor de Audio Oculto (se controla con JavaScript) -->
+    <audio id="background-music" loop>
+        <source src="audio/music.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <div class="invitation-container">
+        
+        <!-- 2. Controles Visuales del Reproductor -->
+        <!-- El resto de tu invitación permanece igual -->
+        <div class="card-interactive">
+            <img src="images/invitacion-1.webp" alt="Detalles del evento" class="card-image">
+            <a target="_blank" class="buterfly3"></a>
+        </div>
+        
+        <div class="card-interactive">
+            <img src="images/invitacion-2.webp" alt="Detalles del evento" class="card-image">
+            <!-- NUEVO CÓDIGO HTML -->
+            <div class="music-player">
+                <!-- Contenedor para la parte superior: botón y barra -->
+                <div class="player-controls">
+                    <button id="play-pause-btn" class="player-button">
+                        <img id="play-pause-icon" src="images/play.png" alt="Play/Pause">
+                    </button>
+                    <div class="progress-container">
+                        <div class="progress-bar"></div>
+                    </div>
+                </div>
+            </div>
+            <a target="_blank" class="buterfly4"></a>
+        </div>
+
+        <div class="card-interactive">
+            <img src="images/invitacion-3.webp" alt="Detalles del evento" class="card-image">
+            <div id="countdown">
+                <div class="time-block">
+                    <span id="days">00</span><small>Días</small>
+                </div>
+                <div class="time-block">
+                    <span id="hours">00</span><small>Horas</small>
+                </div>
+                <div class="time-block">
+                    <span id="minutes">00</span><small>Minutos</small>
+                </div>
+                <div class="time-block">
+                    <span id="seconds">00</span><small>Segundos</small>
+                </div>
+            </div>
+            <a target="_blank" class="buterfly5"></a>
+            <a href="https://maps.app.goo.gl/XEAYwmHYu4CpLbs17" target="_blank" class="map-button">
+                Ir al Mapa
+            </a>
+        </div>
+
+        <div class="card-interactive">
+            <img src="images/invitacion-4.webp" alt="Detalles del evento" class="card-image">
+            <a target="_blank" class="buterfly1"></a>
+        </div>
+
+        <div class="card-interactive">
+            <img src="images/invitacion-5.webp" alt="Detalles del evento" class="card-image">
+            <a target="_blank" class="buterfly2"></a>
+        </div>
+
+        <div class="card-interactive">
+            <img src="images/invitacion-6.webp" alt="Detalles del evento" class="card-image">
+            <a target="_blank" class="buterfly6"></a>
+            <a href="https://wa.me/584127473185?text=Hola!%20Confirmo%20mi%20asistencia%20a%20los%2015%20años%20de%20Mariángel..." target="_blank" class="map-button2">
+                  Clic Aquí
+            </a>
+        </div>
+
+    </div>
+
+    <!-- 3. Carga de los scripts por separado -->
+    <script src="countdown.js" defer></script>
+    <script src="music-player.js" defer></script>
+
+    <!-- ★★★ SCRIPT DEL PRELOADER (DEBE IR AL FINAL) ★★★ -->
+    <script>
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
+            preloader.classList.add('preloader-hidden');
+        });
+    </script>
+
+</body>
+</html>
