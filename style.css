@@ -1,0 +1,303 @@
+/* Estilos generales y fuentes */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #e9ebee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contenedor principal de la invitación */
+.invitation-container {
+    max-width: 500px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para TODAS las imágenes */
+.card-image {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+/* Contenedor interactivo (marco de referencia) */
+.card-interactive {
+    position: relative;
+}
+
+/* --- ESTILOS DEL CONTADOR REGRESIVO --- */
+#countdown {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    display: flex;
+    justify-content: center; /* Centra el grupo de bloques */
+    gap: 10px;               /* Define el espacio ENTRE cada bloque */
+    align-items: center;
+    text-align: center;
+    color: #0d3d6e;
+}
+
+.time-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time-block span {
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: Impact, Arial, sans-serif; /* Fuente Impact */
+    color: #1775b4;                      /* Nuevo color azul */
+}
+
+.time-block small {
+    font-size: 0.7em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: -5px;
+}
+
+/* --- ESTILOS DE LOS BOTONES Y ELEMENTOS DECORATIVOS --- */
+.map-button {
+    position: absolute;
+    bottom: 6%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url('images/boton-bg.webp');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    text-decoration: none;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5em;
+    white-space: nowrap;
+    text-align: center;
+    padding: 18px 55px;
+    transition: transform 0.2s ease;
+}
+
+.map-button:hover {
+    transform: translateX(-50%) scale(1.05);
+}
+
+.map-button2 {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url('images/boton-bg1.webp');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    text-decoration: none;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5em;
+    white-space: nowrap;
+    text-align: center;
+    padding: 18px 55px;
+    transition: transform 0.2s ease;
+}
+
+.map-button2:hover {
+    transform: translateX(-50%) scale(1.05);
+}
+
+.buterfly3 {
+    position: absolute;
+    bottom: 9%;
+    left: 50%;
+    height: 5%;
+    background-image: url('images/butterfly3.gif');
+    background-size: 100% 100%;
+    padding: 18px 55px;
+}
+
+.buterfly4 {
+    position: absolute;
+    bottom: 1%;
+    left: 60%;
+    height: 5%;
+    background-image: url('images/butterfly4.gif');
+    background-size: 100% 100%;
+    padding: 18px 55px;
+}
+
+.buterfly5 {
+    position: absolute;
+    bottom:60%;
+    left: 27%;
+    height: 5%;
+    background-image: url('images/butterfly5.gif');
+    background-size: 100% 100%;
+    padding: 18px 55px;
+}
+
+.buterfly1 {
+    position: absolute;
+    bottom:5%;
+    left: 2%;
+    height: 5%;
+    background-image: url('images/butterfly1.gif');
+    background-size: 100% 100%;
+    padding: 18px 55px;
+}
+
+.buterfly2 {
+    position: absolute;
+    bottom:53%;
+    left: 36%;
+    height: 5%;
+    background-image: url('images/butterfly2.gif');
+    background-size: 100% 100%;
+    padding: 18px 55px;
+}
+
+.buterfly6 {
+    position: absolute;
+    bottom:82%;
+    left: 60%;
+    height: 5%;
+    background-image: url('images/butterfly6.gif');
+    background-size: 100% 100%;
+    padding: 18px 55px;
+}
+
+/* ======================================================= */
+/* ===  ESTILOS ACTUALIZADOS PARA REPRODUCTOR DE MÚSICA === */
+/* ======================================================= */
+
+.music-player {
+    /* 1. Posicionamiento absoluto sobre la imagen */
+    position: absolute;
+    top: 2%; /* Ajusta este valor para subir o bajar el reproductor */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%; /* Ancho del reproductor sobre la imagen */
+
+    /* 2. Usamos flexbox en modo columna para apilar los elementos */
+    display: flex;
+    flex-direction: column; /* <-- La clave del cambio: apila los elementos verticalmente */
+    align-items: center; /* <-- Centra todo horizontalmente */
+    gap: 8px; /* Espacio entre la barra y el texto */
+
+    /* 3. Limpiamos estilos anteriores */
+    padding: 0;
+    background-color: transparent;
+    border-bottom: none;
+}
+
+/* Nuevo contenedor para el botón y la barra */
+.player-controls {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Ocupa todo el ancho del music-player */
+    gap: 15px;
+}
+
+.player-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+}
+
+.player-button img {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5));
+}
+
+.progress-container {
+    flex-grow: 1;
+    height: 3px;
+    background-color: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    position: relative;
+    border-radius: 3px;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #0d3d6e;
+    position: relative;
+    border-radius: 3px;
+}
+
+.progress-bar::after {
+    content: '';
+    position: absolute;
+    right: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    background-color: #000;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+/* --- ESTILOS DEL PRELOADER --- */
+
+#preloader {
+    position: fixed; /* Se queda fijo en la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff; /* Un fondo blanco, puedes cambiarlo */
+    z-index: 9999; /* Se asegura de que esté por encima de todo */
+    display: flex; /* Para centrar el contenido fácilmente */
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.75s ease, visibility 0.75s ease; /* Transición suave */
+}
+
+/* Animación de un spinner simple (círculo que gira) */
+.spinner {
+    border: 8px solid #f3f3f3; /* Gris claro */
+    border-top: 8px solid #3498db; /* Azul */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+/* Si prefieres usar tu logo en lugar del spinner, usa este CSS */
+/*
+#preloader img {
+    width: 150px;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+*/
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Clase que usaremos con JavaScript para ocultar el preloader */
+.preloader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
