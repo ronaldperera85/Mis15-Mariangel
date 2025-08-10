@@ -153,16 +153,6 @@ body {
     padding: 18px 55px;
 }
 
-.buterfly2 {
-    position: absolute;
-    bottom:53%;
-    left: 36%;
-    height: 5%;
-    background-image: url('images/butterfly2.gif');
-    background-size: 100% 100%;
-    padding: 18px 55px;
-}
-
 .buterfly6 {
     position: absolute;
     bottom:82%;
